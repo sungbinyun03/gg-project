@@ -1,6 +1,9 @@
+#!/opt/anaconda3/envs/gg337/bin/python
 '''Version 0.4'''
 
-import spacy 
+import spacy
+nlp = spacy.load("en_core_web_sm")
+print("SpaCy is working correctly!") 
 
 
 def get_hosts(year):
