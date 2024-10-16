@@ -1,4 +1,10 @@
+#!/opt/anaconda3/envs/gg337/bin/python
 '''Version 0.4'''
+
+import spacy
+nlp = spacy.load("en_core_web_sm")
+print("SpaCy is working correctly!") 
+
 
 def get_hosts(year):
     '''Hosts is a list of one or more strings. Do NOT change the name
@@ -11,6 +17,9 @@ def get_awards(year):
     of this function or what it returns.'''
     # Your code here
     return awards
+
+
+
 
 def get_nominees(year):
     '''Nominees is a dictionary with the hard coded award
