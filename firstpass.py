@@ -37,3 +37,4 @@ with open('sorted_tweets_by_frequency.json', 'w') as f:
 
 for tweet, count in sorted_tweets:
     print(f"{tweet}: {count}")
+    

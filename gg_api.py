@@ -19,8 +19,6 @@ def get_awards(year):
     return awards
 
 
-
-
 def get_nominees(year):
     '''Nominees is a dictionary with the hard coded award
     names as keys, and each entry a list of strings. Do NOT change
