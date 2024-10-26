@@ -1,90 +1,128 @@
 Award,Nominee,Mentions
-best animated feature film,brave,7199
-best animated feature film,frankenweenie,6407
-best animated feature film,rise of the guardians,3643
-best animated feature film,hotel transylvania,3153
-best director - motion picture,ben affleck,7246
-best director - motion picture,quentin tarantino,7028
-best director - motion picture,steven spielberg,6612
-best director - motion picture,kathryn bigelow,5841
-best director - motion picture,ang lee,4815
-best foreign language film,amour,7087
-best foreign language film,rust and bone,3113
-best foreign language film,kon tiki,3104
-best mini-series or motion picture made for television,game change,6847
-best mini-series or motion picture made for television,the girl,6133
-best mini-series or motion picture made for television,the hour,920
-best mini-series or motion picture made for television,political animals,329
-best motion picture - comedy or musical,silver linings playbook,7170
-best motion picture - comedy or musical,moonrise kingdom,6711
-best motion picture - comedy or musical,salmon fishing in the yemen,5334
-best motion picture - drama,argo,7248
-best motion picture - drama,django unchained,7169
-best motion picture - drama,zero dark thirty,7151
-best motion picture - drama,lincoln,7116
-best motion picture - drama,life of pi,6972
-best original score - motion picture,cloud atlas,6345
-best original score - motion picture,anna karenina,932
-best original song - motion picture,les miserables,7239
-best original song - motion picture,skyfall,7222
-best original song - motion picture,the hunger games,2045
-best performance by an actor in a mini-series or motion picture made for television,kevin costner,7091
-best performance by an actor in a mini-series or motion picture made for television,benedict cumberbatch,6848
-best performance by an actor in a mini-series or motion picture made for television,toby jones,1287
-best performance by an actor in a motion picture - comedy or musical,hugh jackman,7211
-best performance by an actor in a motion picture - comedy or musical,bill murray,7007
-best performance by an actor in a motion picture - comedy or musical,bradley cooper,6348
-best performance by an actor in a motion picture - comedy or musical,jack black,5011
-best performance by an actor in a motion picture - comedy or musical,ewan mcgregor,3420
-best performance by an actor in a motion picture - drama,joaquin phoenix,5910
-best performance by an actor in a motion picture - drama,denzel washington,5792
-best performance by an actor in a motion picture - drama,john hawkes,5634
-best performance by an actor in a motion picture - drama,richard gere,1424
-best performance by an actor in a supporting role in a motion picture,christoph waltz,6805
-best performance by an actor in a supporting role in a motion picture,leonardo dicaprio,6743
-best performance by an actor in a supporting role in a motion picture,tommy lee jones,3859
-best performance by an actor in a supporting role in a motion picture,alan arkin,492
-"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",mandy patinkin,7247
-"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",ed harris,6523
-"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",danny huston,2717
-"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",max greenfield,2290
-best performance by an actor in a television series - comedy or musical,don cheadle,5922
-best performance by an actor in a television series - comedy or musical,jim parsons,3119
-best performance by an actor in a television series - drama,jon hamm,7238
-best performance by an actor in a television series - drama,damian lewis,7181
-best performance by an actor in a television series - drama,bryan cranston,5387
-best performance by an actor in a television series - drama,jeff daniels,768
-best performance by an actress in a mini-series or motion picture made for television,jessica lange,6545
-best performance by an actress in a mini-series or motion picture made for television,julianne moore,4094
-best performance by an actress in a mini-series or motion picture made for television,nicole kidman,3430
-best performance by an actress in a mini-series or motion picture made for television,sigourney weaver,407
-best performance by an actress in a motion picture - comedy or musical,jennifer lawrence,7215
-best performance by an actress in a motion picture - comedy or musical,maggie smith,7157
-best performance by an actress in a motion picture - comedy or musical,meryl streep,5809
-best performance by an actress in a motion picture - drama,jessica chastain,7241
-best performance by an actress in a motion picture - drama,naomi watts,6575
-best performance by an actress in a motion picture - drama,rachel weisz,5870
-best performance by an actress in a motion picture - drama,helen mirren,5483
-best performance by an actress in a supporting role in a motion picture,anne hathaway,7245
-best performance by an actress in a supporting role in a motion picture,sally field,6389
-best performance by an actress in a supporting role in a motion picture,amy adams,2351
-"best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",sofia vergara,483
-best performance by an actress in a television series - comedy or musical,tina fey,7166
-best performance by an actress in a television series - comedy or musical,lena dunham,7113
-best performance by an actress in a television series - comedy or musical,amy poehler,6873
-best performance by an actress in a television series - comedy or musical,zooey deschanel,3681
-best performance by an actress in a television series - drama,claire danes,6880
-best performance by an actress in a television series - drama,glenn close,6429
-best performance by an actress in a television series - drama,connie britton,3427
-best performance by an actress in a television series - drama,julianna margulies,3374
-best performance by an actress in a television series - drama,michelle dockery,3303
-best television series - comedy or musical,girls,7206
-best television series - comedy or musical,modern family,6561
-best television series - comedy or musical,the big bang theory,5869
-best television series - comedy or musical,smash,4796
-best television series - comedy or musical,episodes,4505
-best television series - drama,homeland,7158
-best television series - drama,breaking bad,5262
-best television series - drama,the newsroom,4134
-best television series - drama,boardwalk empire,774
-cecil b. demille award,jodie foster,7236
+best animated feature film,brave,268.0
+best animated feature film,frankenweenie,16.5
+best animated feature film,hotel transylvania,4.0
+best animated feature film,rise of the guardians,4.0
+best animated feature film,wreck-it ralph,0.0
+best director - motion picture,ben affleck,579.5
+best director - motion picture,quentin tarantino,195.0
+best director - motion picture,ang lee,9.0
+best director - motion picture,steven spielberg,9.0
+best director - motion picture,kathryn bigelow,8.0
+best foreign language film,amour,68.5
+best foreign language film,rust and bone,3.5
+best foreign language film,kon tiki,2.0
+best foreign language film,the intouchables,0.0
+best foreign language film,a royal affair,0.0
+best mini-series or motion picture made for television,game change,137.5
+best mini-series or motion picture made for television,the hour,12.0
+best mini-series or motion picture made for television,the girl,9.5
+best mini-series or motion picture made for television,political animals,5.0
+best mini-series or motion picture made for television,hatfields  mccoys,0.0
+best motion picture - comedy or musical,les miserables,288.0
+best motion picture - comedy or musical,silver linings playbook,66.0
+best motion picture - comedy or musical,moonrise kingdom,28.5
+best motion picture - comedy or musical,salmon fishing in the yemen,7.5
+best motion picture - comedy or musical,the best exotic marigold hotel,1.5
+best motion picture - drama,argo,645.0
+best motion picture - drama,lincoln,235.5
+best motion picture - drama,life of pi,147.5
+best motion picture - drama,django unchained,66.0
+best motion picture - drama,zero dark thirty,38.5
+best original score - motion picture,argo,645.0
+best original score - motion picture,lincoln,235.5
+best original score - motion picture,life of pi,147.5
+best original score - motion picture,cloud atlas,6.0
+best original score - motion picture,anna karenina,1.5
+best original song - motion picture,skyfall,405.5
+best original song - motion picture,les miserables,288.0
+best original song - motion picture,the hunger games,10.0
+best original song - motion picture,stand up guys,0.0
+best original song - motion picture,act of valor,-0.5
+best performance by an actor in a mini-series or motion picture made for television,kevin costner,111.5
+best performance by an actor in a mini-series or motion picture made for television,benedict cumberbatch,80.5
+best performance by an actor in a mini-series or motion picture made for television,toby jones,4.0
+best performance by an actor in a mini-series or motion picture made for television,woody harrelson,0.0
+best performance by an actor in a mini-series or motion picture made for television,clive owen,0.0
+best performance by an actor in a motion picture - comedy or musical,hugh jackman,357.0
+best performance by an actor in a motion picture - comedy or musical,bradley cooper,58.0
+best performance by an actor in a motion picture - comedy or musical,bill murray,31.0
+best performance by an actor in a motion picture - comedy or musical,jack black,9.5
+best performance by an actor in a motion picture - comedy or musical,ewan mcgregor,2.0
+best performance by an actor in a motion picture - drama,denzel washington,9.0
+best performance by an actor in a motion picture - drama,joaquin phoenix,6.0
+best performance by an actor in a motion picture - drama,richard gere,2.0
+best performance by an actor in a motion picture - drama,john hawkes,2.0
+best performance by an actor in a motion picture - drama,daniel day-lewis,0.0
+best performance by an actor in a supporting role in a motion picture,christoph waltz,245.0
+best performance by an actor in a supporting role in a motion picture,tommy lee jones,29.5
+best performance by an actor in a supporting role in a motion picture,leonardo dicaprio,19.5
+best performance by an actor in a supporting role in a motion picture,alan arkin,8.5
+best performance by an actor in a supporting role in a motion picture,philip seymour hoffman,0.0
+"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",ed harris,39.0
+"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",mandy patinkin,19.5
+"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",max greenfield,13.5
+"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",danny huston,3.0
+"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",eric stonestreet,0.0
+best performance by an actor in a television series - comedy or musical,don cheadle,124.0
+best performance by an actor in a television series - comedy or musical,jim parsons,57.5
+best performance by an actor in a television series - comedy or musical,louis ck,11.5
+best performance by an actor in a television series - comedy or musical,matt leblanc,1.5
+best performance by an actor in a television series - comedy or musical,alec baldwin,0.0
+best performance by an actor in a television series - drama,damian lewis,131.5
+best performance by an actor in a television series - drama,jon hamm,33.5
+best performance by an actor in a television series - drama,bryan cranston,33.0
+best performance by an actor in a television series - drama,jeff daniels,5.0
+best performance by an actor in a television series - drama,steve buscemi,3.0
+best performance by an actress in a mini-series or motion picture made for television,julianne moore,102.5
+best performance by an actress in a mini-series or motion picture made for television,jessica lange,47.0
+best performance by an actress in a mini-series or motion picture made for television,nicole kidman,5.0
+best performance by an actress in a mini-series or motion picture made for television,sigourney weaver,3.0
+best performance by an actress in a mini-series or motion picture made for television,sienna miller,0.0
+best performance by an actress in a motion picture - comedy or musical,jennifer lawrence,492.0
+best performance by an actress in a motion picture - comedy or musical,maggie smith,227.0
+best performance by an actress in a motion picture - comedy or musical,meryl streep,26.0
+best performance by an actress in a motion picture - comedy or musical,judi dench,1.5
+best performance by an actress in a motion picture - comedy or musical,emily blunt,0.0
+best performance by an actress in a motion picture - drama,jessica chastain,264.0
+best performance by an actress in a motion picture - drama,sally field,18.5
+best performance by an actress in a motion picture - drama,naomi watts,9.0
+best performance by an actress in a motion picture - drama,helen mirren,2.5
+best performance by an actress in a motion picture - drama,rachel weisz,2.0
+best performance by an actress in a motion picture - drama,marion cotillard,1.5
+best performance by an actress in a supporting role in a motion picture,anne hathaway,666.0
+best performance by an actress in a supporting role in a motion picture,sally field,18.5
+best performance by an actress in a supporting role in a motion picture,amy adams,7.0
+best performance by an actress in a supporting role in a motion picture,nicole kidman,5.0
+best performance by an actress in a supporting role in a motion picture,helen hunt,0.0
+"best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",maggie smith,227.0
+"best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",sofia vergara,20.0
+"best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",sarah paulson,3.0
+"best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",hayden panettiere,0.0
+"best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",archie panjabi,0.0
+best performance by an actress in a television series - comedy or musical,lena dunham,230.5
+best performance by an actress in a television series - comedy or musical,amy poehler,105.0
+best performance by an actress in a television series - comedy or musical,tina fey,52.5
+best performance by an actress in a television series - comedy or musical,zooey deschanel,6.5
+best performance by an actress in a television series - comedy or musical,julia louis-dreyfus,0.0
+best performance by an actress in a television series - drama,claire danes,262.5
+best performance by an actress in a television series - drama,glenn close,11.0
+best performance by an actress in a television series - drama,michelle dockery,11.0
+best performance by an actress in a television series - drama,connie britton,9.0
+best performance by an actress in a television series - drama,julianna margulies,3.0
+best screenplay - motion picture,argo,645.0
+best screenplay - motion picture,lincoln,235.5
+best screenplay - motion picture,silver linings playbook,66.0
+best screenplay - motion picture,django unchained,66.0
+best screenplay - motion picture,zero dark thirty,38.5
+best television series - comedy or musical,girls,284.5
+best television series - comedy or musical,modern family,48.0
+best television series - comedy or musical,the big bang theory,17.5
+best television series - comedy or musical,smash,12.5
+best television series - comedy or musical,episodes,2.0
+best television series - drama,homeland,383.5
+best television series - drama,breaking bad,63.0
+best television series - drama,the newsroom,21.5
+best television series - drama,boardwalk empire,5.0
+best television series - drama,downton abbey masterpiece,0.0
+cecil b. demille award,jodie foster,71.5
