@@ -1,0 +1,127 @@
+{
+    "best television series - drama": [
+        {
+            "title": "Boardwalk Empire"
+        },
+        {
+            "title": "Breaking Bad"
+        },
+        {
+            "title": "Downton Abbey"
+        },
+        {
+            "title": "Glee"
+        },
+        {
+            "title": "Mad Men"
+        },
+        {
+            "title": "Political Animals"
+        },
+        {
+            "title": "Sherlock"
+        },
+        {
+            "title": "Smash"
+        },
+        {
+            "title": "The Newsroom"
+        }
+    ],
+    "best television series - comedy or musical": [
+        {
+            "title": "30 Rock"
+        },
+        {
+            "title": "Modern Family"
+        },
+        {
+            "title": "New Girl"
+        },
+        {
+            "title": "The Big Bang Theory"
+        }
+    ],
+    "best motion picture - drama": [
+        {
+            "title": "Argo"
+        },
+        {
+            "title": "Django Unchained"
+        },
+        {
+            "title": "Flight"
+        },
+        {
+            "title": "Hotel Rwanda"
+        },
+        {
+            "title": "Leo"
+        },
+        {
+            "title": "Life Of Pi"
+        },
+        {
+            "title": "The Hurt Locker"
+        },
+        {
+            "title": "Zero Dark Thirty"
+        }
+    ],
+    "best motion picture - comedy or musical": [
+        {
+            "title": "Eat Pray Love"
+        },
+        {
+            "title": "Ghostbusters"
+        },
+        {
+            "title": "Her"
+        },
+        {
+            "title": "Hope Springs"
+        },
+        {
+            "title": "Les Mis\u00e9rables"
+        },
+        {
+            "title": "Mean Girls"
+        },
+        {
+            "title": "Moonrise Kingdom"
+        },
+        {
+            "title": "Mrs Doubtfire"
+        },
+        {
+            "title": "Silver Linings Playbook"
+        }
+    ],
+    "best animated feature film": [
+        {
+            "title": "Brave"
+        },
+        {
+            "title": "Hotel Transylvania"
+        },
+        {
+            "title": "Rise Of The Guardians"
+        },
+        {
+            "title": "Wreckit Ralph"
+        }
+    ],
+    "best foreign language film": [
+        {
+            "title": "A Royal Affair"
+        },
+        {
+            "title": "Amour"
+        },
+        {
+            "title": "Oscar"
+        }
+    ],
+    "best screenplay - motion picture": [],
+    "best mini-series or motion picture made for television": []
+}
