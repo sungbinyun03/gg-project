@@ -1,0 +1,288 @@
+{
+    "best actress in a motion picture - drama": {
+        "likely winner": "Jessica Chastain",
+        "winner_avg_timestamp": 1358135701763.251,
+        "top_4_closest_nominees": [
+            [
+                "Amanda Seyfried",
+                171087.8125
+            ],
+            [
+                "Naomi Watts",
+                2954929.9177246094
+            ],
+            [
+                "Kim Kardashian",
+                4368263.2509765625
+            ],
+            [
+                "Amy Poehler",
+                4668697.103027344
+            ]
+        ]
+    },
+    "best actor in a motion picture - comedy or musical": {
+        "likely winner": "Hugh Jackman",
+        "winner_avg_timestamp": 1358134904466.0422,
+        "top_4_closest_nominees": [
+            [
+                "Tim Burton",
+                414966.0422363281
+            ],
+            [
+                "Logan Lerman",
+                717533.9577636719
+            ],
+            [
+                "Jon Hamm",
+                1239917.5192871094
+            ],
+            [
+                "Bradley Cooper",
+                2102647.8603515625
+            ]
+        ]
+    },
+    "best actress in a motion picture - comedy or musical": {
+        "likely winner": "Jennifer Lawrence",
+        "winner_avg_timestamp": 1358130665131.6726,
+        "top_4_closest_nominees": [
+            [
+                "Ann Hathaway",
+                103506.67260742188
+            ],
+            [
+                "Amy Poehler",
+                367934.4753417969
+            ],
+            [
+                "Mandy Patinkin",
+                633274.5297851562
+            ],
+            [
+                "Michelle Dockery",
+                635353.8947753906
+            ]
+        ]
+    },
+    "best actor in a supporting role in a motion picture": {
+        "likely winner": "Christoph Waltz",
+        "winner_avg_timestamp": 1358127314742.3728,
+        "top_4_closest_nominees": [
+            [
+                "Jeff Daniels",
+                33117.372802734375
+            ],
+            [
+                "Steve Buscemi",
+                47757.627197265625
+            ],
+            [
+                "Brian Cranston",
+                236257.62719726562
+            ],
+            [
+                "Hayden Panettiere",
+                771924.2939453125
+            ]
+        ]
+    },
+    "best actress in a supporting role in a motion picture": {
+        "likely winner": "Anne Hathaway",
+        "winner_avg_timestamp": 1358131557667.4033,
+        "top_4_closest_nominees": [
+            [
+                "Kim Kardashian",
+                224167.4033203125
+            ],
+            [
+                "Amy Poehler",
+                524601.2553710938
+            ],
+            [
+                "Ann Hathaway",
+                996042.4033203125
+            ],
+            [
+                "Naomi Watts",
+                1189165.9299316406
+            ]
+        ]
+    },
+    "best actor in a television series - drama": {
+        "likely winner": "Damian Lewis",
+        "winner_avg_timestamp": 1358128365949.6404,
+        "top_4_closest_nominees": [
+            [
+                "Hayden Panettiere",
+                279282.9736328125
+            ],
+            [
+                "Tommy Lee Jones",
+                573240.8356933594
+            ],
+            [
+                "Bryan Cranston",
+                669130.3596191406
+            ],
+            [
+                "Brian Cranston",
+                814949.6403808594
+            ]
+        ]
+    },
+    "best actress in a television series - drama": {
+        "likely winner": "Claire Danes",
+        "winner_avg_timestamp": 1358131697394.0398,
+        "top_4_closest_nominees": [
+            [
+                "Kim Kardashian",
+                363894.0397949219
+            ],
+            [
+                "Amy Poehler",
+                664327.8918457031
+            ],
+            [
+                "Naomi Watts",
+                1049439.2934570312
+            ],
+            [
+                "Ann Hathaway",
+                1135769.0397949219
+            ]
+        ]
+    },
+    "best actor in a television series - comedy or musical": {
+        "likely winner": "Don Cheadle",
+        "winner_avg_timestamp": 1358131131441.4414,
+        "top_4_closest_nominees": [
+            [
+                "Jim Pearson",
+                239441.44140625
+            ],
+            [
+                "Jim Parsons",
+                482555.72705078125
+            ],
+            [
+                "Bill Murray",
+                945558.55859375
+            ],
+            [
+                "Matt LeBlanc",
+                1269066.44140625
+            ]
+        ]
+    },
+    "best actress in a television series - comedy or musical": {
+        "likely winner": "Lena Dunham",
+        "winner_avg_timestamp": 1358132601975.862,
+        "top_4_closest_nominees": [
+            [
+                "Naomi Watts",
+                144857.47119140625
+            ],
+            [
+                "Kim Kardashian",
+                1268475.8620605469
+            ],
+            [
+                "Amy Poehler",
+                1568909.7141113281
+            ],
+            [
+                "Ann Hathaway",
+                2040350.8620605469
+            ]
+        ]
+    },
+    "best actor in a mini-series or motion picture made for television": {
+        "likely winner": "Kevin Costner",
+        "winner_avg_timestamp": 1358129318186.2744,
+        "top_4_closest_nominees": [
+            [
+                "Taylor Swift",
+                183684.22924804688
+            ],
+            [
+                "Bryan Cranston",
+                283106.2744140625
+            ],
+            [
+                "Benedict Cumberbatch",
+                289965.8994140625
+            ],
+            [
+                "Tommy Lee Jones",
+                378995.79833984375
+            ]
+        ]
+    },
+    "best actress in a mini-series or motion picture made for television": {
+        "likely winner": "Julianne Moore",
+        "winner_avg_timestamp": 1358130272777.7778,
+        "top_4_closest_nominees": [
+            [
+                "Mandy Patinkin",
+                240920.63500976562
+            ],
+            [
+                "Michelle Dockery",
+                243000.0
+            ],
+            [
+                "Sally Field",
+                246227.77783203125
+            ],
+            [
+                "Ann Hathaway",
+                288847.22216796875
+            ]
+        ]
+    },
+    "best actor in a supporting role in a series, mini-series or motion picture made for television": {
+        "likely winner": "Ed Harris",
+        "winner_avg_timestamp": 1358130528277.7778,
+        "top_4_closest_nominees": [
+            [
+                "Jim Parsons",
+                120607.9365234375
+            ],
+            [
+                "Jim Pearson",
+                363722.22216796875
+            ],
+            [
+                "Matt LeBlanc",
+                665902.7778320312
+            ],
+            [
+                "Max Greenfield",
+                736277.7778320312
+            ]
+        ]
+    },
+    "best actress in a supporting role in a series, mini-series or motion picture made for television": {
+        "likely winner": "Maggie Smith",
+        "winner_avg_timestamp": 1358129392110.1694,
+        "top_4_closest_nominees": [
+            [
+                "Connie Britton",
+                312310.16943359375
+            ],
+            [
+                "Miranda Hill",
+                403889.83056640625
+            ],
+            [
+                "Sally Field",
+                634439.8305664062
+            ],
+            [
+                "Michelle Dockery",
+                637667.6083984375
+            ]
+        ]
+    }
+}

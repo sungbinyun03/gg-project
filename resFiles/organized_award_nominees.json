@@ -1,0 +1,104 @@
+{
+    "best television series - drama": [
+        {
+            "title": "Boardwalk Empire",
+            "score": 10
+        },
+        {
+            "title": "Sherlock",
+            "score": 130
+        },
+        {
+            "title": "Breaking Bad",
+            "score": 1006
+        },
+        {
+            "title": "The Newsroom",
+            "score": 256
+        },
+        {
+            "title": "Downton Abbey",
+            "score": 3822
+        },
+        {
+            "title": "Political Animals",
+            "score": 25
+        }
+    ],
+    "best television series - comedy or musical": [
+        {
+            "title": "Modern Family",
+            "score": 523
+        },
+        {
+            "title": "New Girl",
+            "score": 111
+        },
+        {
+            "title": "The Big Bang Theory",
+            "score": 62
+        }
+    ],
+    "best motion picture - drama": [
+        {
+            "title": "Life of Pi",
+            "score": 3988
+        },
+        {
+            "title": "Zero Dark Thirty",
+            "score": 3516
+        },
+        {
+            "title": "Django Unchained",
+            "score": 8769
+        },
+        {
+            "title": "Argo",
+            "score": 24923
+        },
+        {
+            "title": "Leo",
+            "score": 1123
+        },
+        {
+            "title": "Hotel Rwanda",
+            "score": 10
+        }
+    ],
+    "best motion picture - comedy or musical": [
+        {
+            "title": "Her",
+            "score": 11528
+        },
+        {
+            "title": "Silver Linings Playbook",
+            "score": 5137
+        },
+        {
+            "title": "Moonrise Kingdom",
+            "score": 291
+        },
+        {
+            "title": "Mean Girls",
+            "score": 10
+        }
+    ],
+    "best animated feature film": [
+        {
+            "title": "Brave",
+            "score": 5731
+        }
+    ],
+    "best foreign language film": [
+        {
+            "title": "Oscar",
+            "score": 5882
+        },
+        {
+            "title": "Amour",
+            "score": 2462
+        }
+    ],
+    "best screenplay - motion picture": [],
+    "best mini-series or motion picture made for television": []
+}

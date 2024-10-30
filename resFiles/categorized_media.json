@@ -1,0 +1,59 @@
+{
+    "TV": {
+        "Drama": [
+            "Sherlock",
+            "Smash",
+            "Boardwalk Empire",
+            "Mad Men",
+            "Breaking Bad",
+            "Downton Abbey",
+            "Glee",
+            "Political Animals",
+            "Breaking Bad",
+            "The Newsroom",
+            "Downton Abbey"
+        ],
+        "Comedy or Musical": [
+            "The Big Bang Theory",
+            "Modern Family",
+            "30 Rock",
+            "New Girl"
+        ]
+    },
+    "Film": {
+        "Foreign Film": [
+            "A Royal Affair",
+            "Oscar",
+            "Amour"
+        ],
+        "Animated Film": [
+            "Wreck-It Ralph",
+            "Brave",
+            "Wreck-It Ralph",
+            "Hotel Transylvania",
+            "Rise of the Guardians"
+        ],
+        "Comedy or Musical": [
+            "Hope Springs",
+            "Eat Pray Love",
+            "Mrs. Doubtfire",
+            "Moonrise Kingdom",
+            "Her",
+            "Les Mis\u00e9rables",
+            "Ghostbusters",
+            "Silver Linings Playbook",
+            "Les Mis\u00e9rables",
+            "Mean Girls"
+        ],
+        "Drama": [
+            "Flight",
+            "Leo",
+            "Hotel Rwanda",
+            "Django Unchained",
+            "The Hurt Locker",
+            "Argo",
+            "Zero Dark Thirty",
+            "Life of Pi"
+        ]
+    }
+}
