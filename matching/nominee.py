@@ -1,101 +1,180 @@
 import json
-from statistics import mean
-from gender_guesser.detector import Detector
+import re
+from collections import defaultdict
+import gender_guesser.detector as gender
+from difflib import SequenceMatcher
 
-# Initialize the gender detector
-detector = Detector()
+detector = gender.Detector(case_sensitive=False)
 
-# Load JSON data
-with open('../resFiles/organized_awards_noMatching.json') as f:
-    award_nominees = json.load(f)
 
-with open('../resFiles/firstpass_timeStamp.json') as f:
-    tweets = json.load(f)
-
-with open('../resFiles/likely_nominees.json') as f:
-    likely_nominees = json.load(f)
-
-# Function to calculate average timestamp
-def calculate_average_timestamp(mentions):
-    timestamps = [int(tweet['timestamp_ms']) for tweet in mentions if 'timestamp_ms' in tweet]
-    return mean(timestamps) if timestamps else None
-
-# Find mentions of a person in tweets
-def get_mentions(person_name, tweets):
-    return [tweet for tweet in tweets if person_name.lower() in tweet['text'].lower()]
-
-# Determine expected gender from the award category
-def get_expected_gender(category):
-    if 'actress' in category:
-        return 'female'
-    elif 'actor' in category:
+def detect_gender(name):
+    person_gender = detector.get_gender(name)
+    if person_gender in ['male', 'mostly_male']:
         return 'male'
-    return None
+    elif person_gender in ['female', 'mostly_female']:
+        return 'female'
+    else:
+        return 'unknown'
 
-# Check if a person matches the expected gender
-def is_gender_match(name, expected_gender):
-    guessed_gender = detector.get_gender(name.split()[0])
-    if expected_gender == 'female':
-        return guessed_gender in ['female', 'mostly_female']
-    elif expected_gender == 'male':
-        return guessed_gender in ['male', 'mostly_male']
+def similarity(a, b):
+    return SequenceMatcher(None, a, b).ratio()
+
+def is_valid_name(name):
+    if len(name.strip().split()) >= 2:
+        return True
     return False
 
-# Process each likely winner
-winner_timestamps = {}
-for category, info in award_nominees.items():
-    likely_winner = info.get("likely winner")
-    if likely_winner:
-        expected_gender = get_expected_gender(category)
-        # Check if the likely winner matches the expected gender
-        if is_gender_match(likely_winner, expected_gender):
-            # Get mentions of the likely winner and calculate average timestamp
-            winner_mentions = get_mentions(likely_winner, tweets)
-            winner_avg_timestamp = calculate_average_timestamp(winner_mentions)
-            if winner_avg_timestamp:
-                winner_timestamps[category] = {
-                    "likely winner": likely_winner,
-                    "winner_avg_timestamp": winner_avg_timestamp,
-                    "expected_gender": expected_gender
-                }
+def get_people_nom():
+    with open('./resFiles/likely_nominees.json', 'r') as f:
+        likely_nominees = json.load(f)
 
-# Create a set of all likely winners to exclude them from nominees
-all_likely_winners = {info["likely winner"] for info in winner_timestamps.values()}
+    with open('./resFiles/organized_awards.json', 'r') as f:
+        organized_awards = json.load(f)
 
-# Process each nominee in likely_nominees and calculate average timestamp
-nominee_timestamps = {}
-for nominee, data in likely_nominees.items():
-    if nominee not in all_likely_winners:  # Exclude if nominee is a likely winner
-        nominee_mentions = get_mentions(nominee, tweets)
-        nominee_avg_timestamp = calculate_average_timestamp(nominee_mentions)
-        if nominee_avg_timestamp:
-            nominee_timestamps[nominee] = nominee_avg_timestamp
+    with open('./resFiles/categorized_media.json', 'r') as f:
+        categorized_media = json.load(f)
 
-# Structure results: Compare average timestamps of each winner with nominees and apply gender filtering
-results = {}
-for category, winner_info in winner_timestamps.items():
-    likely_winner = winner_info["likely winner"]
-    winner_avg_timestamp = winner_info["winner_avg_timestamp"]
-    expected_gender = winner_info["expected_gender"]
+    with open('./resFiles/people.json', 'r') as f:
+        people = json.load(f)
 
-    # Find nominees closest to the winner's average timestamp, filtered by gender and excluding other likely winners
-    closest_nominees = sorted(
-        [
-            (nominee, abs(nominee_avg_timestamp - winner_avg_timestamp))
-            for nominee, nominee_avg_timestamp in nominee_timestamps.items()
-            if is_gender_match(nominee, expected_gender)
-        ],
-        key=lambda x: x[1]
-    )[:4]  # Get top 3 closest nominees
+    valid_people = set(name.lower() for name in people.keys())
 
-    results[category] = {
-        "likely winner": likely_winner,
-        "winner_avg_timestamp": winner_avg_timestamp,
-        "top_4_closest_nominees": closest_nominees
-    }
+    likely_winners = set()
+    winner_to_award = {}
+    for award, info in organized_awards.items():
+        winner = info.get('likely winner', '').lower()
+        likely_winners.add(winner)
+        winner_to_award[winner] = award
 
-# Save results to JSON
-with open('categorized_winners_and_nominees.json', 'w') as f:
-    json.dump(results, f, indent=4)
+    award_phrases = {}
+    award_winners = {}
+    for award in organized_awards.keys():
+        phrase = re.sub(r'best\s+', '', award, flags=re.IGNORECASE)
+        phrase = phrase.lower()
+        award_phrases[award] = phrase
+        award_winners[award] = organized_awards[award]['likely winner'].lower()
 
-print("Script executed successfully! Results are saved in 'categorized_winners_and_nominees.json'")
+    media_titles = {}
+    for media_type, categories in categorized_media.items():
+        for category, titles in categories.items():
+            for title in titles:
+                title_lower = title.lower()
+                media_titles[title_lower] = {'media_type': media_type, 'category': category}
+
+    award_nominees = defaultdict(set)  # Use set to avoid duplicates
+
+
+
+    # process likely winners and their linked persons
+    for winner_name, winner_data in likely_nominees.items():
+        winner_name_lower = winner_name.lower()
+        if winner_name_lower in likely_winners:
+            award = winner_to_award.get(winner_name_lower)
+            if award:
+                linked_persons = winner_data.get('linked person', [])
+                for linked_person in linked_persons:
+                    linked_person_lower = linked_person.lower()
+                    if linked_person_lower in likely_nominees:
+                        if linked_person_lower not in valid_people:
+                            continue
+                        if not is_valid_name(linked_person):
+                            continue
+                        award_nominees[award].add(linked_person)
+                award_nominees[award].add(winner_name)
+
+    for nominee in likely_nominees.keys():
+        nominee_lower = nominee.lower()
+        if nominee_lower in likely_winners:
+            continue
+        if nominee_lower not in valid_people:
+            continue
+        if not is_valid_name(nominee):
+            continue
+
+        nominee_tweets = likely_nominees[nominee]['tweets']
+
+        nominee_award_points = defaultdict(int)
+
+        for tweet in nominee_tweets:
+            tweet_lower = tweet.lower()
+
+            best_matches = re.findall(r'best\s+([a-z\s\-]+)', tweet_lower)
+            for match in best_matches:
+                match = match.strip()
+                for award, phrase in award_phrases.items():
+                    sim_score = similarity(match, phrase)
+                    if sim_score > 0.7:
+                        nominee_award_points[award] += 10
+
+            for award, winner in award_winners.items():
+                if winner in tweet_lower and nominee_lower in tweet_lower:
+                    nominee_award_points[award] += 12
+
+            for title, info in media_titles.items():
+                if title in tweet_lower:
+                    gender_of_nominee = detect_gender(nominee.split()[0])
+                    if gender_of_nominee == 'unknown':
+                        continue
+                    if info['media_type'] == 'TV':
+                        if info['category'] == 'Drama':
+                            if gender_of_nominee == 'male':
+                                award = 'best actor in a television series - drama'
+                            elif gender_of_nominee == 'female':
+                                award = 'best actress in a television series - drama'
+                            nominee_award_points[award] += 3
+                        elif info['category'] == 'Comedy or Musical':
+                            if gender_of_nominee == 'male':
+                                award = 'best actor in a television series - comedy or musical'
+                            elif gender_of_nominee == 'female':
+                                award = 'best actress in a television series - comedy or musical'
+                            nominee_award_points[award] += 3
+                    elif info['media_type'] == 'Film':
+                        if info['category'] == 'Drama':
+                            if gender_of_nominee == 'male':
+                                award = 'best actor in a motion picture - drama'
+                            elif gender_of_nominee == 'female':
+                                award = 'best actress in a motion picture - drama'
+                            nominee_award_points[award] += 3
+                        elif info['category'] == 'Comedy or Musical':
+                            if gender_of_nominee == 'male':
+                                award = 'best actor in a motion picture - comedy or musical'
+                            elif gender_of_nominee == 'female':
+                                award = 'best actress in a motion picture - comedy or musical'
+                            nominee_award_points[award] += 3
+
+        if nominee_award_points:
+            max_points = max(nominee_award_points.values())
+            if max_points >= 8:
+                top_awards = [award for award, points in nominee_award_points.items() if points == max_points]
+                for award in top_awards:
+                    award_nominees[award].add(nominee)
+                    linked_persons = likely_nominees[nominee].get('linked person', [])
+                    for linked_person in linked_persons:
+                        linked_person_lower = linked_person.lower()
+                        if linked_person_lower in likely_nominees:
+                            if linked_person_lower not in valid_people:
+                                continue
+                            if not is_valid_name(linked_person):
+                                continue
+                            award_nominees[award].add(linked_person)
+
+    final_output = {}
+    for award in organized_awards.keys():
+        modified_award = award
+        if re.search(r'\bbest\s+actor\b', award, re.IGNORECASE):
+            modified_award = re.sub(r'\bbest\s+(actor\b)', r'best performance by an \1', award, flags=re.IGNORECASE)
+        elif re.search(r'\bbest\s+actress\b', award, re.IGNORECASE):
+            modified_award = re.sub(r'\bbest\s+(actress\b)', r'best performance by an \1', award, flags=re.IGNORECASE)
+        nominees = list(award_nominees.get(award, []))
+        likely_winner = organized_awards[award]['likely winner']
+        if likely_winner not in nominees:
+            nominees.append(likely_winner)
+        final_output[modified_award] = nominees
+
+    final_output['cecil b. demille award'] = []
+    with open('./resFiles/people_nominees.json', 'w') as f:
+        json.dump(final_output, f, indent=4)
+    print("@@@@PEOPLE NOM DONE!!!")
+
+if __name__ == "__main__":
+    get_people_nom()

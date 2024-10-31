@@ -1,62 +1,58 @@
 import json
 import re
 from collections import defaultdict
-# Load categorized media data
-with open('../resFiles/categorized_media.json', 'r') as f:
-    media_data = json.load(f)
-with open('../resFiles/firstpass.json', 'r') as f:
-    tweets = json.load(f)
-# Define award categories mapped to their respective media types without scoring
-AWARD_CATEGORIES = {
-    "best television series - drama": media_data["TV"]["Drama"],
-    "best television series - comedy or musical": media_data["TV"]["Comedy or Musical"],
-    "best motion picture - drama": media_data["Film"]["Drama"],
-    "best motion picture - comedy or musical": media_data["Film"]["Comedy or Musical"],
-    "best animated feature film": media_data["Film"]["Animated Film"],
-    "best foreign language film": media_data["Film"]["Foreign Film"],
-    "best screenplay - motion picture": [],
-    "best mini-series or motion picture made for television": []
-}
+import spacy
+from .constants import AWARD_CATEGORIES, ADDITIONAL_AWARD_KEYWORDS
 
-def clean_text(text):
-    """Normalize text by removing special characters and converting to title case."""
-    cleaned_text = re.sub(r'[^\w\s]', '', text)  # Remove special characters
-    return cleaned_text.title().strip()  # Convert to title case
-def count_mentions(tweets, title):
-    """Count the number of mentions of a given title in a list of tweets."""
-    count = 0
-    title_pattern = re.compile(rf"\b{re.escape(title)}\b", re.IGNORECASE)
+
+nlp = spacy.load("en_core_web_sm")
+
+def extract_core_entity(entity_text, award_keyword):
+    cleaned_entity = re.sub(rf"\b{award_keyword}\b", '', entity_text, flags=re.IGNORECASE).strip()
+    cleaned_entity = re.sub(r"(for|motion picture|best)", '', cleaned_entity, flags=re.IGNORECASE).strip()
+    return cleaned_entity
+
+def extract_top_entities(tweets, keyword):
+    entity_counts = defaultdict(int)
+    keyword_pattern = re.compile(rf"\b{keyword}\b", re.IGNORECASE)
+    
     for tweet in tweets:
-        if title_pattern.search(tweet):
-            count += 1
-    return count
+        if keyword_pattern.search(tweet):
+            doc = nlp(tweet)
+            for ent in doc.ents:
+                if ent.label_ in ["WORK_OF_ART", "ORG"]:
+                    core_entity = extract_core_entity(ent.text, keyword)
+                    if core_entity:
+                        entity_counts[core_entity] += 1
+    
+    sorted_entities = sorted(entity_counts.items(), key=lambda x: x[1], reverse=True)[:5]
+    return [ent for ent, count in sorted_entities]
 
-# Process each award category, clean titles, and remove duplicates
-award_nominees = {}
-for award, titles in AWARD_CATEGORIES.items():
-    # Normalize and deduplicate titles
-    unique_titles = {clean_text(title) for title in titles}
-    award_nominees[award] = [{"title": title} for title in sorted(unique_titles)]
+def get_media_nom():
+    top_nominees = {}
+    with open('./resFiles/categorized_media.json', 'r') as f:
+        media_data = json.load(f)
+    with open('./resFiles/firstpass.json', 'r') as f:
+        tweets = json.load(f)
 
-# Save the cleaned and deduplicated results to JSON
-top_nominees = {}
+    for award, titles in AWARD_CATEGORIES.items():
+        if titles:
+            mention_counts = []
+            unique_titles = {title.strip() for title in titles}
+            for title in unique_titles:
+                mentions = sum(1 for tweet in tweets if re.search(rf"\b{re.escape(title)}\b", tweet, re.IGNORECASE))
+                mention_counts.append((title, mentions))
+            sorted_nominees = sorted(mention_counts, key=lambda x: x[1], reverse=True)[:5]
+            top_nominees[award] = [title for title, mentions in sorted_nominees]
+        else:
+            keyword = ADDITIONAL_AWARD_KEYWORDS.get(award, "")
+            if keyword:
+                top_nominees[award] = extract_top_entities(tweets, keyword)
+    top_nominees["best mini-series or motion picture made for television"] = []
+    with open('./resFiles/media_nominees.json', 'w') as f:
+        json.dump(top_nominees, f, indent=4)
+    print("@@@@PEOPLE NOM DONE!!!")
 
-for award, nominees in award_nominees.items():
-    mention_counts = []
 
-    # Count mentions for each nominee title in the tweets
-    for nominee in nominees:
-        title = nominee["title"]
-        mentions = count_mentions(tweets, title)
-        mention_counts.append((title, mentions))
-
-    # Sort titles by mention count in descending order and take the top 5
-    sorted_nominees = sorted(mention_counts, key=lambda x: x[1], reverse=True)[:5]
-    top_nominees[award] = [{"title": title, "mentions": mentions} for title, mentions in sorted_nominees]
-
-# Save the top 5 nominees for each award category to a JSON file
-with open('../resFiles/top_nominees.json', 'w') as f:
-    json.dump(top_nominees, f, indent=4)
-
-print("Top 5 nominees by mentions saved to top_nominees.json")
-print("Cleaned and deduplicated nominees saved to potential_nominees_cleaned.json")
+if __name__ == "__main__":
+    get_media_nom()
