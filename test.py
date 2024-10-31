@@ -1,10 +1,11 @@
-import spacy
-from imdb import Cinemagoer, IMDbDataAccessError
-import wikipedia
-from rapidfuzz import fuzz
+#!/opt/anaconda3/envs/gg337/bin/python
+# import spacy
+# from imdb import Cinemagoer, IMDbDataAccessError
+# import wikipedia
+# from rapidfuzz import fuzz
 
-summary = wikipedia.summary("Best performance by an actor in a drama", sentences=2)
-print(summary)
+# summary = wikipedia.summary("Best performance by an actor in a drama", sentences=2)
+# print(summary)
 
 # nlp = spacy.load("en_core_web_trf")
 # doc = nlp(
@@ -20,3 +21,12 @@ print(summary)
 #             token.shape_, token.is_alpha, token.is_stop)
 # # for ent in doc.ents:
 # #     print(ent.text, ent.start_char, ent.end_char, ent.label_)
+
+
+
+import spacy 
+spacy_model  = spacy_model = spacy.load("en_core_web_sm")
+spaced = spacy_model('best animated feature film')
+for token in spaced:
+    print(token.pos_, token.text)
+print(spaced)

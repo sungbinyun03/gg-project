@@ -1,10 +1,6 @@
 #!/opt/anaconda3/envs/gg337/bin/python
 '''Version 0.4'''
 
-import spacy
-nlp = spacy.load("en_core_web_sm")
-print("SpaCy is working correctly!") 
-
 
 def get_hosts(year):
     '''Hosts is a list of one or more strings. Do NOT change the name
@@ -13,6 +9,9 @@ def get_hosts(year):
     return hosts
 
 def get_awards(year):
+    awards = exec(open('./matching/Awards.py').read())
+    
+
     '''Awards is a list of strings. Do NOT change the name
     of this function or what it returns.'''
     # Your code here
@@ -47,6 +46,8 @@ def pre_ceremony():
     Do NOT change the name of this function or what it returns.'''
     # Your code here
     print("Pre-ceremony processing complete.")
+    # Entities.py 
+    # 
     return
 
 def main():
