@@ -74,7 +74,7 @@ def get_presenters(year):
     names as keys, and each entry a list of strings. Do NOT change the
     name of this function or what it returns.'''
     # Your code here
-    presenters = []
+    presenters = {}
     return presenters
 
 def pre_ceremony(year):

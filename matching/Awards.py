@@ -115,5 +115,5 @@ def extract_awards():
 def get_award_list():
     awards_phase_1 = extract_awards()
     final_awards = get_final_awards(awards_phase_1)
-    return final_awards[0]
+    return final_awards
 

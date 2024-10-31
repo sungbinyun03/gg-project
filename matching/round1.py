@@ -29,18 +29,9 @@ def count_nominee_mentions(tweets, award_nominees):
     for award, counts in nominee_counts.items():
         if counts:
             winners[award] = max(counts, key=counts.get) if max(counts.values()) > 0 else None
-    
-    export_to_csv(nominee_counts)
-    
+        
     return winners
 
-def export_to_csv(nominee_counts):
-    with open('nominee_mentions.csv', mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(["Award", "Nominee", "Mentions"])
-        for award, counts in nominee_counts.items():
-            for nominee, count in counts.items():
-                writer.writerow([award, nominee, count])
 
 
 def get_winners(year):

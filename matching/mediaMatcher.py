@@ -44,10 +44,10 @@ def classify_media_titles(media_entries):
             
             if subcategory:
                 categorized_media[media_type][subcategory].append(title)
-            else:
-                print(f"Could not categorize '{title}' into a subcategory.")
-                print("@@@@ SUMMARY: ", summary)
-                print("@@@@ MEDIA TYPE: ", media_type)
+            # else:
+            #     print(f"Could not categorize '{title}' into a subcategory.")
+                # print("@@@@ SUMMARY: ", summary)
+                # print("@@@@ MEDIA TYPE: ", media_type)
                 
         except Exception as e:
             print(f"An error occurred with '{media}': {e}")

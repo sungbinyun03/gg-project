@@ -1,23 +1,24 @@
 {
     "TV": {
         "Drama": [
-            "Smash",
-            "Glee",
-            "Breaking Bad",
             "Downton Abbey",
-            "Sherlock",
             "Mad Men",
             "Breaking Bad",
+            "Band of Brothers",
+            "Breaking Bad",
             "Boardwalk Empire",
+            "Smash",
             "Political Animals",
             "Downton Abbey",
-            "The Newsroom"
+            "Glee",
+            "The Newsroom",
+            "Sherlock"
         ],
         "Comedy or Musical": [
-            "30 Rock",
-            "The Big Bang Theory",
             "New Girl",
-            "Modern Family"
+            "Modern Family",
+            "The Big Bang Theory",
+            "30 Rock"
         ]
     },
     "Film": {
@@ -27,33 +28,33 @@
             "A Royal Affair"
         ],
         "Animated Film": [
-            "Brave",
             "Hotel Transylvania",
             "Wreck-It Ralph",
             "Rise of the Guardians",
-            "Wreck-It Ralph"
+            "Wreck-It Ralph",
+            "Brave"
         ],
         "Comedy or Musical": [
+            "Les Mis\u00e9rables",
+            "Les Mis\u00e9rables",
             "Mrs. Doubtfire",
-            "Silver Linings Playbook",
-            "Eat Pray Love",
-            "Les Mis\u00e9rables",
-            "Moonrise Kingdom",
-            "Her",
-            "Mean Girls",
-            "Les Mis\u00e9rables",
             "Hope Springs",
+            "Her",
+            "Eat Pray Love",
+            "Mean Girls",
+            "Moonrise Kingdom",
+            "Silver Linings Playbook",
             "Ghostbusters"
         ],
         "Drama": [
-            "The Hurt Locker",
             "Life of Pi",
             "Zero Dark Thirty",
-            "Django Unchained",
-            "Leo",
             "Hotel Rwanda",
+            "Leo",
+            "The Hurt Locker",
+            "Flight",
             "Argo",
-            "Flight"
+            "Django Unchained"
         ]
     }
 }
