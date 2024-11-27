@@ -1,22 +1,22 @@
 {
     "TV": {
         "Drama": [
+            "The Newsroom",
+            "Downton Abbey",
+            "Breaking Bad",
+            "Band of Brothers",
+            "Political Animals",
+            "Boardwalk Empire",
+            "Sherlock",
             "Downton Abbey",
             "Mad Men",
             "Breaking Bad",
-            "Band of Brothers",
-            "Breaking Bad",
-            "Boardwalk Empire",
-            "Smash",
-            "Political Animals",
-            "Downton Abbey",
             "Glee",
-            "The Newsroom",
-            "Sherlock"
+            "Smash"
         ],
         "Comedy or Musical": [
-            "New Girl",
             "Modern Family",
+            "New Girl",
             "The Big Bang Theory",
             "30 Rock"
         ]
@@ -28,33 +28,33 @@
             "A Royal Affair"
         ],
         "Animated Film": [
-            "Hotel Transylvania",
-            "Wreck-It Ralph",
             "Rise of the Guardians",
             "Wreck-It Ralph",
-            "Brave"
+            "Wreck-It Ralph",
+            "Brave",
+            "Hotel Transylvania"
         ],
         "Comedy or Musical": [
-            "Les Mis\u00e9rables",
-            "Les Mis\u00e9rables",
-            "Mrs. Doubtfire",
             "Hope Springs",
-            "Her",
-            "Eat Pray Love",
             "Mean Girls",
-            "Moonrise Kingdom",
+            "Les Mis\u00e9rables",
+            "Eat Pray Love",
+            "Her",
             "Silver Linings Playbook",
-            "Ghostbusters"
+            "Mrs. Doubtfire",
+            "Moonrise Kingdom",
+            "Ghostbusters",
+            "Les Mis\u00e9rables"
         ],
         "Drama": [
             "Life of Pi",
             "Zero Dark Thirty",
-            "Hotel Rwanda",
-            "Leo",
-            "The Hurt Locker",
             "Flight",
+            "The Hurt Locker",
+            "Leo",
             "Argo",
-            "Django Unchained"
+            "Django Unchained",
+            "Hotel Rwanda"
         ]
     }
 }

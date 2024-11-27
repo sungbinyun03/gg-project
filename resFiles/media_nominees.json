@@ -1,4 +1,42 @@
 {
+    "best television series - drama": [
+        "Breaking Bad",
+        "Downton Abbey",
+        "The Newsroom",
+        "Smash",
+        "Glee"
+    ],
+    "best television series - comedy or musical": [
+        "Modern Family",
+        "The Big Bang Theory",
+        "New Girl",
+        "30 Rock"
+    ],
+    "best motion picture - drama": [
+        "Argo",
+        "Django Unchained",
+        "Life of Pi",
+        "Zero Dark Thirty",
+        "Leo"
+    ],
+    "best motion picture - comedy or musical": [
+        "Her",
+        "Silver Linings Playbook",
+        "Moonrise Kingdom",
+        "Mean Girls",
+        "Hope Springs"
+    ],
+    "best animated feature film": [
+        "Brave",
+        "Hotel Transylvania",
+        "Rise of the Guardians",
+        "Wreck-It Ralph"
+    ],
+    "best foreign language film": [
+        "Oscar",
+        "Amour",
+        "A Royal Affair"
+    ],
     "best screenplay - motion picture": [
         "Django Unchained",
         "Lincoln",
@@ -10,15 +48,15 @@
     "best original score - motion picture": [
         "Life of Pi",
         "the Life of Pi",
-        "KNX1070",
         "CNNshowbiz",
-        "RT CNNshowbiz"
+        "RT CNNshowbiz",
+        "KNX1070"
     ],
     "best original song - motion picture": [
         "Skyfall",
         "in a",
         "YouTube",
         "OfficialAdele",
-        "KeithUrban"
+        "Stank Eye OMG OMG"
     ]
 }

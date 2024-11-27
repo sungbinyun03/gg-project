@@ -1,0 +1,124 @@
+Host: ['Amy Poehler', 'Tina Fey']
+
+Award: Best Performance By An Actor In A Motion Picture - Drama
+Presenters: N/A
+Nominees: Quentin Tarantino, Daniel Day-Lewis
+Winner: Daniel Day-Lewis
+
+Award: Best Performance By An Actress In A Motion Picture - Drama
+Presenters: N/A
+Nominees: Kathryn Bigelow, Jessica Chastain, Osama bin Laden
+Winner: Jessica Chastain
+
+Award: Best Performance By An Actor In A Motion Picture - Comedy Or Musical
+Presenters: N/A
+Nominees: Taylor Swift, Bradley Cooper, Jack Black, George Clooney, Hugh Jackman
+Winner: Hugh Jackman
+
+Award: Best Performance By An Actress In A Motion Picture - Comedy Or Musical
+Presenters: N/A
+Nominees: Meryl Streep, Amy Adams, Jennifer Lawrence, Harvey Weinstein, Jodie Foster
+Winner: Jennifer Lawrence
+
+Award: Best Performance By An Actor In A Supporting Role In A Motion Picture
+Presenters: N/A
+Nominees: Christoph Waltz
+Winner: Christoph Waltz
+
+Award: Best Performance By An Actress In A Supporting Role In A Motion Picture
+Presenters: N/A
+Nominees: Marion Cotillard, Helen Hunt, Sally Field, Anne Hathaway, Amanda Seyfried
+Winner: Anne Hathaway
+
+Award: Best Director - Motion Picture
+Presenters: N/A
+Nominees: Steven Spielberg, Ang Lee, Ben Affleck
+Winner: Ben Affleck
+
+Award: Best Performance By An Actor In A Television Series - Drama
+Presenters: N/A
+Nominees: Damian Lewis, Bryan Cranston, Connie Britton, Jeff Daniels
+Winner: Damian Lewis
+
+Award: Best Performance By An Actress In A Television Series - Drama
+Presenters: N/A
+Nominees: Michelle Dockery, Damien Lewis, Connie Britton, Mandy Patinkin, Claire Danes
+Winner: Claire Danes
+
+Award: Best Performance By An Actor In A Television Series - Comedy Or Musical
+Presenters: N/A
+Nominees: Jim Parsons, Don Cheadle, Alec Baldwin
+Winner: Don Cheadle
+
+Award: Best Performance By An Actress In A Television Series - Comedy Or Musical
+Presenters: N/A
+Nominees: Tommy Lee Jones, Zooey Deschanel, Lena Dunham, Amy Poehler, Tina Fey
+Winner: Lena Dunham
+
+Award: Best Performance By An Actor In A Mini-Series Or Motion Picture Made For Television
+Presenters: N/A
+Nominees: Kevin Costner, Benedict Cumberbatch, Bill Clinton
+Winner: Kevin Costner
+
+Award: Best Performance By An Actress In A Mini-Series Or Motion Picture Made For Television
+Presenters: N/A
+Nominees: Jon Hamm, Sarah Palin, Jessica Lange, Julianne Moore
+Winner: Julianne Moore
+
+Award: Best Performance By An Actor In A Supporting Role In A Series, Mini-Series Or Motion Picture Made For Television
+Presenters: N/A
+Nominees: Mandy Patinkin, Ed Harris
+Winner: Ed Harris
+
+Award: Best Performance By An Actress In A Supporting Role In A Series, Mini-Series Or Motion Picture Made For Television
+Presenters: N/A
+Nominees: Maggie Smith
+Winner: Maggie Smith
+
+Award: Best Television Series - Drama
+Presenters: N/A
+Nominees: Breaking Bad, Downton Abbey, The Newsroom, Smash, Glee
+Winner: Homeland
+
+Award: Best Television Series - Comedy Or Musical
+Presenters: N/A
+Nominees: Modern Family, The Big Bang Theory, New Girl, 30 Rock
+Winner: Girls
+
+Award: Best Motion Picture - Drama
+Presenters: N/A
+Nominees: Argo, Django Unchained, Life of Pi, Zero Dark Thirty, Leo
+Winner: Argo
+
+Award: Best Motion Picture - Comedy Or Musical
+Presenters: N/A
+Nominees: Her, Silver Linings Playbook, Moonrise Kingdom, Mean Girls, Hope Springs
+Winner: Les Miserables
+
+Award: Best Animated Feature Film
+Presenters: N/A
+Nominees: Brave, Hotel Transylvania, Rise of the Guardians, Wreck-It Ralph
+Winner: Brave
+
+Award: Best Foreign Language Film
+Presenters: N/A
+Nominees: Oscar, Amour, A Royal Affair
+Winner: Amour
+
+Award: Best Screenplay - Motion Picture
+Presenters: N/A
+Nominees: Django Unchained, Lincoln, RT AMCTheatres, Tarantinos, The Nword
+Winner: Argo
+
+Award: Best Original Score - Motion Picture
+Presenters: N/A
+Nominees: Life of Pi, the Life of Pi, CNNshowbiz, RT CNNshowbiz, KNX1070
+Winner: Argo
+
+Award: Best Original Song - Motion Picture
+Presenters: N/A
+Nominees: Skyfall, in a, YouTube, OfficialAdele, Stank Eye OMG OMG
+Winner: Les Miserables
+
+Most Drunk: ['quentin tarantino', 'glenn close', 'tina fey']
+

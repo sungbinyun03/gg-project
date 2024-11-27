@@ -4,10 +4,15 @@
 
 ### To run
 python install -r requirements.txt
+Download the spacy model with python -m spacy download en_core_web_trf and python -m spacy download en_core_web_sm
 
 The entire processing flow was integrated into the main function of gg_api.
 
 The results are also saved as json files in the folder resFiles
+
+Final results: 
+JSON -> resFiles/output.json, 
+human readable -> resFiles/human_readable_output.txt
 
 ### About the Project 
 This project involves analyzing tweets about the Golden Globe Awards to automatically extract and structure information about the ceremony. The core challenge is building a robust information extraction system that can understand and categorize unstructured social media text.

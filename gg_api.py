@@ -12,6 +12,61 @@ from matching.round1 import get_winners
 from matching.mostDrunk import get_most_drunk
 from matching.Awards import get_award_list
 
+import json
+
+def output_final_results(winners, hosts, mostDrunk):
+    with open('./resFiles/final_nominees.json', 'r') as f:
+        nominees_data = json.load(f)
+    human_readable_output = ''
+    json_output = {}
+    human_readable_output += f'Host: {hosts}\n\n'
+    json_output['Host'] = hosts
+    
+    for award, nominees in nominees_data.items():
+        if not nominees:
+            continue
+        
+        award_key = award.lower().strip()
+        
+        winner = winners.get(award_key, None)
+        
+        presenters = []
+        
+        human_readable_output += f'Award: {award.title()}\n'
+        if presenters:
+            human_readable_output += f'Presenters: {", ".join(presenters)}\n'
+        else:
+            human_readable_output += f'Presenters: N/A\n'
+        if nominees:
+            human_readable_output += f'Nominees: {", ".join(nominees)}\n'
+        else:
+            human_readable_output += f'Nominees: N/A\n'
+        if winner:
+            human_readable_output += f'Winner: {winner.title()}\n\n'
+        else:
+            human_readable_output += f'Winner: N/A\n\n'
+        
+        json_output[award.title()] = {
+            'Presenters': presenters,
+            'Nominees': nominees,
+            'Winner': winner.title() if winner else None
+        }
+    
+    human_readable_output += f'Most Drunk: {mostDrunk}\n\n'
+    json_output['Most Drunk'] = mostDrunk
+
+    json_str = json.dumps(json_output, indent=4)
+    with open('./resFiles/human_readable_output.txt', 'w') as f:
+        f.write(human_readable_output)
+    
+    with open('./resFiles/output.json', 'w') as f:
+        json.dump(json_output, f, indent=4)
+    
+    return human_readable_output, json_str
+    
+
+
+
 def get_hosts(year):
     '''Hosts is a list of one or more strings. Do NOT change the name
     of this function or what it returns.'''
@@ -20,7 +75,7 @@ def get_hosts(year):
         tweets = json.load(f)
 
     hosts = extract_top_hosts(tweets)
-    print("HOSTS: ", hosts)
+    # print("HOSTS: ", hosts)
     return hosts
 
 def get_awards(year):
@@ -105,12 +160,13 @@ def main():
     what it returns.'''
     # Your code here
     pre_ceremony(2013)
-    get_hosts(2013)
+    hosts = get_hosts(2013)
     get_awards(2013)
     get_nominees(2013)
-    get_winner(2013)
-    get_mostDrunk()
-    return
+    winners = get_winner(2013)
+    mostDrunk = get_mostDrunk()
+    human_output, json = output_final_results(winners, hosts, mostDrunk)
+    return human_output, json
 
 if __name__ == '__main__':
     main()
